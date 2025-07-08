@@ -14,13 +14,46 @@
       padding: 0;
     }
 
-    header {
-      background:  #8b0000;
-      background-size: 20px 20px;
-      color: rgb(255, 255, 255);
-      padding: 40px 20px;
-      text-align: center;
-    }
+   header {
+    background: linear-gradient(135deg, #8b0000, #a52a2a);
+    color: #fff;
+    padding: 80px 20px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -50%;
+    width: 200%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(255,255,255,0.1), transparent 70%);
+    animation: shine 5s linear infinite;
+  }
+
+  @keyframes shine {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+  }
+
+  header h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+  }
+
+  header p {
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-top: 10px;
+    opacity: 0.9;
+  }
 
     nav {
       background-color: #a52a2a;
